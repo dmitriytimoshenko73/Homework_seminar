@@ -56,3 +56,18 @@ while (i <= num)
     Console.Write (i*i*i +" ");
     i++;
 }
+
+/* Вариант 2*/
+
+Console.WriteLine ("Enter number  ");
+double num = double.Parse(Console.ReadLine());
+
+double i = 1;
+
+while (i <= num)
+{
+
+    double result = Math.Pow (i, 3);
+    Console.Write (result +" ");
+    i++;
+}

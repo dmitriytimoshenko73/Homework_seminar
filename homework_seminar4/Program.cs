@@ -66,7 +66,7 @@ void SumNumbers(int n, int len)
         sum += n % 10;
         n /= 10;
     }
-    Console.WriteLine(sum);
+    Console.WriteLine("Сумма чисел" + " " + sum);
 }
 
 

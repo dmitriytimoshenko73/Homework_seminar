@@ -34,7 +34,7 @@ int ReadInt(string message)
 
 9012 -> 12*/
 
-int number = ReadInt("Введите число : ");
+/*int number = ReadInt("Введите число : ");
 int len = NumberLen(number);
 SumNumbers(number, len);
 
@@ -68,6 +68,39 @@ void SumNumbers(int n, int len)
     }
     Console.WriteLine("Сумма чисел" + " " + sum);
 }
+*/
 
+/*Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+
+6, 1, 33 -> [6, 1, 33]*/
+
+int[] Array = new int[8];
+
+void Put (int [] Numbers)
+{
+  int length = Numbers.Length;
+  
+  for (int i = 0; i < length; i++)
+  {
+      Numbers[i] = new Random().Next(1, 30);
+  }
+  return;
+}
+
+void Print (int[] point)
+{
+  int digit = point.Length;
+  for (int count = 0; count < digit; count++)
+  {
+      System.Console.Write(point[count] + " ");
+  }
+  return;
+}
+
+Put(Array);
+Print(Array);
+System.Console.WriteLine();
 
 

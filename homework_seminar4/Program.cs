@@ -4,12 +4,10 @@
 2, 4 -> 16
 */
 
-/*int numberA = ReadInt("Введите число A: ");
+int numberA = ReadInt("Введите число A: ");
 int numberB = ReadInt("Введите число B: ");
 ToDegree(numberA, numberB);
 
-
-// Функция возведения в степень
 void ToDegree(int a, int b)
 {
     int result = 1;
@@ -20,13 +18,12 @@ void ToDegree(int a, int b)
     Console.WriteLine(result);
 }
 
-// Функция ввода
 int ReadInt(string message)
 {
     Console.WriteLine(message);
     return int.Parse(Console.ReadLine());
 }
-*/
+
 /*Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 452 -> 11
 
@@ -34,18 +31,17 @@ int ReadInt(string message)
 
 9012 -> 12*/
 
-/*int number = ReadInt("Введите число : ");
+int number = ReadIntA("Введите число : ");
 int len = NumberLen(number);
 SumNumbers(number, len);
 
-// Функция ввода
-int ReadInt(string message)
+
+int ReadIntA(string message)
 {
     Console.Write(message);
     return int.Parse(Console.ReadLine());
 }
 
-// Функция подсчета цифр в числе
 int NumberLen(int a)
 {
     int index = 0;
@@ -57,7 +53,6 @@ int NumberLen(int a)
     return index;
 }
 
-// Функция вывода суммы цифр в числе
 void SumNumbers(int n, int len)
 {
     int sum = 0;
@@ -68,7 +63,7 @@ void SumNumbers(int n, int len)
     }
     Console.WriteLine("Сумма чисел" + " " + sum);
 }
-*/
+
 
 /*Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
@@ -102,5 +97,4 @@ void Print (int[] point)
 Put(Array);
 Print(Array);
 System.Console.WriteLine();
-
 

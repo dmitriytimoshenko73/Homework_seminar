@@ -28,3 +28,36 @@ for (int i = 0; i < Massiv.Length; i++)
 }
 
 Console.WriteLine($"количество чётных чисел в массиве -> {count} ");
+
+
+/*Задача 36: Задайте одномерный массив, заполненный случайными числами. 
+Найдите сумму элементов, стоящих на нечётных позициях.
+
+[3, 7, 23, 12] -> 19
+
+[-4, -6, 89, 6] -> 0*/
+
+
+int[] MassivA = Array  (9, 0, 10);
+
+
+Console.WriteLine(String.Join(" ", MassivA));
+
+int SumNegatives (int[] MassivA)
+{
+int sum = 0;
+
+for (int i = 0; i < MassivA.Length; i++)
+{
+    if (i % 2 != 0)
+    sum += MassivA[i];
+}
+    return sum; 
+}
+
+Console.WriteLine($"сумма элементов, стоящих на нечетных позициях -> {SumNegatives(MassivA)}");
+
+
+
+
+

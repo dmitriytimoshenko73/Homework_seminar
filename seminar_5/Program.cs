@@ -16,6 +16,7 @@ int [] Array  (int size, int minValue, int maxValue)
 
 int[] Massiv = Array  (10, 100, 999);
 
+
 Console.WriteLine(String.Join(" ", Massiv));
 
 int count = 0;

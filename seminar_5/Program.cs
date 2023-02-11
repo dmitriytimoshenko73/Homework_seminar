@@ -14,7 +14,7 @@ int [] Array  (int size, int minValue, int maxValue)
     return res;
 }
 
-int[] Massiv = Array  (10, 100, 1000);
+int[] Massiv = Array  (10, 100, 999);
 
 Console.WriteLine(String.Join(" ", Massiv));
 

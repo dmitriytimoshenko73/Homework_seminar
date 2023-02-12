@@ -16,10 +16,10 @@ int [] Array  (int size, int minValue, int maxValue)
 
 int[] Massiv = Array  (10, 100, 999);
 
-
 Console.WriteLine(String.Join(" ", Massiv));
 
-int Event (int[] Massiv);
+int EventNumbers(int[] Massiv)
+
 {
 int count = 0;
 for (int i = 0; i < Massiv.Length; i++)
@@ -29,7 +29,7 @@ for (int i = 0; i < Massiv.Length; i++)
 }
     return count;
 }
-Console.WriteLine($"количество чётных чисел в массиве -> {Event (Massiv)} ");
+Console.WriteLine($"количество чётных чисел в массиве -> {EventNumbers (Massiv)} ");
 
 
 /*Задача 36: Задайте одномерный массив, заполненный случайными числами. 
@@ -40,7 +40,7 @@ Console.WriteLine($"количество чётных чисел в массив
 [-4, -6, 89, 6] -> 0*/
 
 
-/*int[] MassivA = Array  (9, 0, 10);
+int[] MassivA = Array  (9, 0, 99);
 
 
 Console.WriteLine(String.Join(" ", MassivA));
@@ -58,11 +58,11 @@ for (int i = 0; i < MassivA.Length; i++)
 }
 
 Console.WriteLine($"сумма элементов, стоящих на нечетных позициях -> {SumOddPosition(MassivA)}");
-*/
+
 
 
 /*Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным
- и минимальным элементов массива.
+ и минимальным элементами массива.
 [3 7 22 2 78] -> 76*/
 
 

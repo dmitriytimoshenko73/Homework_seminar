@@ -3,7 +3,7 @@
 //[345, 897, 568, 234] -> 2
 
 
-int [] Array  (int size, int minValue, int maxValue)
+/*int [] Array  (int size, int minValue, int maxValue)
 {
     int [] res = new int[size];
 
@@ -30,7 +30,7 @@ for (int i = 0; i < Massiv.Length; i++)
     return count;
 }
 Console.WriteLine($"количество чётных чисел в массиве -> {EventNumbers (Massiv)} ");
-
+*/
 
 /*Задача 36: Задайте одномерный массив, заполненный случайными числами. 
 Найдите сумму элементов, стоящих на нечётных позициях.
@@ -40,7 +40,7 @@ Console.WriteLine($"количество чётных чисел в массив
 [-4, -6, 89, 6] -> 0*/
 
 
-int[] MassivA = Array  (9, 0, 99);
+/*int[] MassivA = Array  (9, 0, 99);
 
 
 Console.WriteLine(String.Join(" ", MassivA));
@@ -58,11 +58,68 @@ for (int i = 0; i < MassivA.Length; i++)
 }
 
 Console.WriteLine($"сумма элементов, стоящих на нечетных позициях -> {SumOddPosition(MassivA)}");
-
+*/
 
 
 /*Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным
  и минимальным элементами массива.
 [3 7 22 2 78] -> 76*/
+
+/*double[]ArrayB (int size, double min, double max)
+{
+    double [] res = new double[size];
+
+    for (int i = 0; i < size; i++)
+    {
+        res[i] = Convert.ToDouble.Random().Next(min, max + 1);
+    }
+    return res;
+}
+
+double[] MassivB = ArrayB  (5, -100, 100);
+
+Console.WriteLine(String.Join(" ", MassivB));*/
+
+Console.WriteLine("Введите размер массива  ");
+int size = int.Parse(Console.ReadLine());
+double[] numbers = new double[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("массив: ");
+PrintArray(numbers);
+double min = Int32.MaxValue;
+double max = Int32.MinValue;
+
+for (int i = 0; i < numbers.Length; i++)
+{
+    if (numbers[i] > max)
+        {
+            max = numbers[i];
+        }
+    if (numbers[i] < min)
+        {
+            min = numbers[i];
+        }
+}
+
+Console.WriteLine($"всего {numbers.Length} чисел. Максимальное значение = {max}, минимальное значение = {min}");
+Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
+
+void FillArrayRandomNumbers(double[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = Convert.ToDouble(new Random().Next(-100,100)) / 10;
+        }
+}
+void PrintArray(double[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
+}
 
 

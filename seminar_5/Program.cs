@@ -72,8 +72,8 @@ double[] numbers = new double[size];
 FillArrayRandomNumbers(numbers);
 Console.WriteLine("массив: ");
 PrintArray(numbers);
-double min = Int32.MaxValue;
-double max = Int32.MinValue;
+double min = int.MaxValue;
+double max = int.MinValue;
 
 for (int i = 0; i < numbers.Length; i++)
 {
@@ -107,5 +107,6 @@ void PrintArray(double[] numbers)
     Console.Write("]");
     Console.WriteLine();
 }
+
 
 

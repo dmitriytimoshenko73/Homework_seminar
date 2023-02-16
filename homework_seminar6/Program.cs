@@ -88,7 +88,7 @@ double k2 = int.Parse(Console.ReadLine());
 double x = (b2-b1)/(k1-k2);
 double y = (k2*x+b2);
 
-if (k1-k2 == 0)
+if (y != k1 * x + b1 || k1-k2 == 0)
 {
     System.Console.WriteLine("Решений нет!");
 }

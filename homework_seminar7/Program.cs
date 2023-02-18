@@ -83,7 +83,7 @@ int l = ReadInt("Введите индекс столбца  ");
 if (i < numbersA.GetLength(0) && l < numbersA.GetLength(1))
 
 {
-    Console.Write(numbersA[i, l]);
+    Console.Write($"число {numbersA[i, l]}");
 }
 
 else
@@ -124,11 +124,8 @@ void AvgResult(int[,] numbersA)
         {
             result += numbersA[i, l];
         }
-
         Console.WriteLine();
-
-        Console.WriteLine($"Среднее арифметическое ");
-
+        Console.Write($"Среднее арифметическое ");
         Console.WriteLine($"{result / numbersA.GetLength(0)}" + " ");
     }
     Console.WriteLine();
@@ -142,7 +139,7 @@ void AvgResult(int[,] numbersA)
 11 16 15 06
 10 09 08 07
 */
-
+Console.WriteLine();
 int n = 4;
 int[,] sqareMatrix = new int[n, n];
 

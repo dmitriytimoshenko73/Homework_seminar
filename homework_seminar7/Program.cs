@@ -126,7 +126,7 @@ void AvgResult(int[,] numbersA)
         }
         Console.WriteLine();
         Console.Write($"Среднее арифметическое ");
-        Console.WriteLine($"{result / numbersA.GetLength(0)}" + " ");
+        Console.Write($"{Math.Round(result / numbersA.GetLength(0), 1)}" + " ");
     }
     Console.WriteLine();
 }
@@ -141,27 +141,27 @@ void AvgResult(int[,] numbersA)
 */
 Console.WriteLine();
 int n = 4;
-int[,] sqareMatrix = new int[n, n];
+int[,] spiralMatrix = new int[n, n];
 
 int temp = 1;
 int c = 0;
 int d = 0;
 
-while (temp <= sqareMatrix.GetLength(0) * sqareMatrix.GetLength(1))
+while (temp <= spiralMatrix.GetLength(0) * spiralMatrix.GetLength(1))
 {
-  sqareMatrix[c, d] = temp;
+  spiralMatrix[c, d] = temp;
   temp++;
-  if (c <= d + 1 && c + d < sqareMatrix.GetLength(1) - 1)
+  if (c <= d + 1 && c + d < spiralMatrix.GetLength(1) - 1)
     d++;
-  else if (c < d && c + d >= sqareMatrix.GetLength(0) - 1)
+  else if (c < d && c + d >= spiralMatrix.GetLength(0) - 1)
     c++;
-  else if (c >= d && c + d > sqareMatrix.GetLength(1) - 1)
+  else if (c >= d && c + d > spiralMatrix.GetLength(1) - 1)
     d--;
   else
     c--;
 }
 
-WriteArray(sqareMatrix);
+WriteArray(spiralMatrix);
 
 void WriteArray (int[,] array)
 {

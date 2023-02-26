@@ -99,7 +99,11 @@ Console.WriteLine();
 Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой 
 элементов: 1 строка */
 
-int[,] number = new int[4, 5];
+Console.WriteLine("Введите размер прямоугольного массива c x d и диапазон случайных значений:");
+int c = InputNumbers("Введите c: ");
+int d = InputNumbers("Введите d: ");
+int rand = InputNumbers("Введите диапазон: от 1 до ");
+int[,] number = new int[c, d];
 Console.WriteLine();
 GetMatrix(number);
 PrintArray(number);

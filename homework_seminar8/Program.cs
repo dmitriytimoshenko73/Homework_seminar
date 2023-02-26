@@ -99,7 +99,7 @@ Console.WriteLine();
 Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой 
 элементов: 1 строка */
 
-int[,] number = new int[4, 4];
+int[,] number = new int[4, 5];
 Console.WriteLine();
 GetMatrix(number);
 PrintArray(number);

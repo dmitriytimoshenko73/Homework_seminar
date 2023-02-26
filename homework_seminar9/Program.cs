@@ -9,8 +9,12 @@ int number = int.Parse(Console.ReadLine());
 ///Метод вывода натуральных чисел от N до 1:
 void NumberCounter(int number)
 {
-    if (number < 0) Console.Write($"{number} не натуральное число"); return;
-    if (number == 0) return;
+    if (number < 0) 
+    {
+        Console.Write($"{number} не натуральное число"); 
+        return;
+    }
+    else if (number == 0) return;
     Console.Write(number + " ");
     NumberCounter(number - 1);
 }
@@ -23,8 +27,9 @@ NumberCounter(number);
 
 M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30 */
-
-/*int m = InputNumbers("Введите m: ");
+Console.WriteLine();
+Console.WriteLine();
+int m = InputNumbers("Введите m: ");
 int n = InputNumbers("Введите n: ");
 int temp = m;
 
@@ -53,4 +58,24 @@ int InputNumbers(string input)
   int output = Convert.ToInt32(Console.ReadLine());
   return output;
 }
-*/
+
+
+/*Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. 
+Даны два неотрицательных числа m и n.
+m = 2, n = 3 -> A(m,n) = 9
+m = 3, n = 2 -> A(m,n) = 29 */
+Console.WriteLine();
+Console.WriteLine();
+int k = InputNumbers("Введите m: ");
+int l = InputNumbers("Введите n: ");
+
+///Метод вычисления функции Аккермана:
+int AckermannFunction (int k, int l)
+{
+    if (k == 0) return l + 1;
+    if (k != 0 && l == 0) return AckermannFunction(k - 1, 1);
+    if (k > 0 && l > 0) return AckermannFunction(k - 1, AckermannFunction (k,l - 1));
+return AckermannFunction(k, l);
+}
+
+Console.WriteLine($"Функция Аккермана для чисел A({k},{l}) = {AckermannFunction(k, l)}");
